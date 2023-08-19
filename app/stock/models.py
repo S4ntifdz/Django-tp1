@@ -21,8 +21,7 @@ class stock_product(models.Model):
     name_product = models.CharField(max_length=140)
     description = models.TextField(max_length=1200)
     code_product = models.CharField(max_length=10)
-    # picture = 
     expiration = models.DateTimeField()    
     
-    def __str__(self):
+    def __str__(self): #devuelve el nombre
         return self.name_product
