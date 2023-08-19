@@ -20,8 +20,10 @@ class stock_product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)  
     name_product = models.CharField(max_length=140)
     description = models.TextField(max_length=1200)
+    imagen = models.ImageField(upload_to="productos", null = True)
     code_product = models.CharField(max_length=10)
     expiration = models.DateTimeField()    
+    
     
     def __str__(self): #devuelve el nombre
         return self.name_product
