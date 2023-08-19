@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#.................................
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #aca hago el enlace entre la url y que esa url apunte al directiorio fisico
 ]
+if settings.DEBUG: #aca pregunto si estoy en debug, ya que nunca me dejaria hacerlo en produccion
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
