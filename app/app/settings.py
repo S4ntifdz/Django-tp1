@@ -124,7 +124,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-#-------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------#
+
 AUTH_USER_MODEL = "clients.ClientModel"
 # ACA DEFINO EL MODELO DE REFERENCIA QUE VA A USAR DJANGO PARA VALIDAR LOS USUARIOS, QUE ES EL QUE YO CREE
 
