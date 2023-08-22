@@ -15,14 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 #.................................
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #aca hago el enlace entre la url y que esa url apunte al directiorio fisico
+    path('', include('sing_up.urls')),
 ]
 if settings.DEBUG: #aca pregunto si estoy en debug, ya que nunca me dejaria hacerlo en produccion
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
