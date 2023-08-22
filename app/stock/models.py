@@ -30,4 +30,4 @@ class stock_product(models.Model):
     
     
     def __str__(self): 
-        return self.name_product
+        return f"{self.name_product} | Seller:  {self.user} "

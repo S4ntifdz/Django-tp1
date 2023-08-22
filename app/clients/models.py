@@ -10,6 +10,7 @@ class BusinessLineChoices(models.TextChoices):
     OTROS = "Otros"
     
 class ClientModel(AbstractUser):
+    
     cuit = models.CharField(max_length=11)
     business_line = models.CharField(choices=BusinessLineChoices.choices, max_length=128, default=BusinessLineChoices.OTROS.value)
     business_line_interes = models.CharField(choices=BusinessLineChoices.choices, max_length=128, default=BusinessLineChoices.OTROS.value)
