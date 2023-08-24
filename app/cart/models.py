@@ -19,3 +19,7 @@ class CartItem(models.Model):
     
     def __str__(self):
         return f"{self.quantity} x {self.product.name_product} en {self.cart}"
+
+#     MI DUDA ES SI TENGO QUE CREAR UN MODELO "PADRE" QUE ACUMULE VARIOS 
+#     MODELOS "HIJOS", LOS HIJOS ESTAN INTEGRADOS POR UN PRODUCTO, PRECIO Y CANTIDAD
+#     Y EL MODELO PADRE SOLO SUMA LOS PRECIOS PARA UN PRECIO TOTAL DE COMPRA

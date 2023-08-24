@@ -18,22 +18,23 @@ from clients.models import ClientModel
 class SignUpStep1Form(UserCreationForm):
     class Meta:
         model = ClientModel
-        fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
-    username = forms.CharField(
-        label="Username",
-        max_length=150,  # Establece la longitud máxima deseada
-        help_text='',  # Borra la ayuda que se muestra debajo del campo
-    )
-    password1 = forms.CharField(
-        label="Password",
-        max_length=150,  # Establece la longitud máxima deseada
-        help_text='',  # Borra la ayuda que se muestra debajo del campo
-    )
-    password2 = forms.CharField(
-        label="Repeat password",
-        max_length=150,  # Establece la longitud máxima deseada
-        help_text='',  # Borra la ayuda que se muestra debajo del campo
-    )
+        fields = '__all__'
+    #     fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
+    # username = forms.CharField(
+    #     label="Username",
+    #     max_length=150,  # Establece la longitud máxima deseada
+    #     help_text='',  # Borra la ayuda que se muestra debajo del campo
+    # )
+    # password1 = forms.CharField(
+    #     label="Password",
+    #     max_length=150,  # Establece la longitud máxima deseada
+    #     help_text='',  # Borra la ayuda que se muestra debajo del campo
+    # )
+    # password2 = forms.CharField(
+    #     label="Repeat password",
+    #     max_length=150,  # Establece la longitud máxima deseada
+    #     help_text='',  # Borra la ayuda que se muestra debajo del campo
+    # )
 class SignUpStep2Form(forms.ModelForm):
     class Meta:
         model = ClientModel
