@@ -10,7 +10,8 @@ class BusinessLineChoices(models.TextChoices):
     OTROS = "Otros"
     
 class ClientModel(AbstractUser):
-    
+    #TODO COMO PUEDO HACER PARA QUE LA CARGA DE STOCK SOLO SE LE PERMITAN A 
+    #USUARIOS CON CATEGORIA "IS SELLER"
     cuit = models.CharField(max_length=11)
     business_line = models.CharField(choices=BusinessLineChoices.choices, max_length=128, default=BusinessLineChoices.OTROS.value)
     business_line_interes = models.CharField(choices=BusinessLineChoices.choices, max_length=128, default=BusinessLineChoices.OTROS.value)
