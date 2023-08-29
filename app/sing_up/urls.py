@@ -14,3 +14,4 @@ urlpatterns = [
     path('signup/step2/', views.signup_step2, name='signup_step2'),
     # Agrega una URL para la página de éxito si lo deseas
 ]
+
