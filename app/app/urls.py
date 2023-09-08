@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #aca hago el enlace entre la url y que esa url apunte al directiorio fisico
     path('', include('sing_up.urls')),
+    path("", include("web.urls")),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 if settings.DEBUG: #aca pregunto si estoy en debug, ya que nunca me dejaria hacerlo en produccion
     from django.conf.urls.static import static
