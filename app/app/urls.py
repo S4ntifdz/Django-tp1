@@ -22,7 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     #aca hago el enlace entre la url y que esa url apunte al directiorio fisico
-    path('', include('sing_up.urls')),
+    path('', include('signup.urls')),
     path("", include("web.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
 ]
